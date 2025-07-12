@@ -7,6 +7,9 @@
     <meta name="description" content="Contactez National Froid pour votre projet de climatisation. Devis gratuit, intervention 24h/7j en Île-de-France. Tel: 01.57.42.49.74">
     <meta name="keywords" content="contact climatisation Paris, devis gratuit, urgence climatisation, dépannage 24h">
     
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./gnffavicon.png">
+    
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -129,17 +132,35 @@
         }
         
         .urgence-banner {
-            background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+            background: linear-gradient(135deg, var(--yellow-600) 0%, var(--yellow-700) 100%);
             color: var(--white);
-            padding: var(--spacing-lg);
+            padding: var(--spacing-xl);
             border-radius: var(--border-radius-lg);
             text-align: center;
             margin-bottom: var(--spacing-xl);
+            border: 3px solid var(--yellow-400);
+            box-shadow: var(--shadow-lg);
         }
         
         .urgence-banner h3 {
             color: var(--white);
             margin-bottom: var(--spacing-sm);
+        }
+        
+        .urgence-banner .btn-white {
+            background-color: var(--white);
+            color: var(--yellow-700);
+            border: 2px solid var(--white);
+            font-weight: 600;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            transition: all 0.3s ease;
+        }
+        
+        .urgence-banner .btn-white:hover {
+            background-color: var(--yellow-50);
+            color: var(--yellow-800);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
         }
         
         .map-container {
@@ -189,6 +210,15 @@
                 grid-template-columns: 1fr;
             }
         }
+        
+        /* Isoler le footer du CSS de la page contact */
+        .footer .contact-info {
+            background-color: transparent !important;
+            padding: 0 !important;
+            border-radius: 0 !important;
+            box-shadow: none !important;
+            height: auto !important;
+        }
     </style>
 </head>
 <body>
@@ -197,7 +227,7 @@
         <nav class="navbar">
             <div class="nav-container">
                 <a href="index.html" class="nav-logo">
-                    <img src="./gnflogo.jpeg" alt="National Froid" width="180" height="50">
+                    <img src="./gnflogo.jpeg" alt="National Froid" style="max-width: 180px; height: auto; margin-bottom: var(--spacing-md);">
                 </a>
                 
                 <div class="nav-menu" id="nav-menu">
@@ -261,11 +291,12 @@
                 <!-- Informations de contact -->
                 <div class="contact-info">
                     <div class="urgence-banner">
-                        <h3>🚨 Urgence 24h/7j</h3>
-                        <p>Panne de climatisation ? Dépannage immédiat</p>
-                        <a href="tel:0157424974" class="btn btn-white" style="margin-top: var(--spacing-md);">
-                            Appeler maintenant
+                        <h3 style="margin: 0 0 var(--spacing-md) 0; font-size: var(--font-size-xl); color: var(--white);">Service d'Urgence 24h/7j</h3>
+                        <p style="margin-bottom: var(--spacing-lg); font-size: var(--font-size-lg); color: var(--white);">Panne de climatisation ? Intervention rapide garantie</p>
+                        <a href="tel:0157424974" class="btn btn-white" style="margin-top: var(--spacing-sm); padding: var(--spacing-md) var(--spacing-xl); font-weight: 600;">
+                            📞 Appeler maintenant : 01.57.42.49.74
                         </a>
+                        <p style="margin-top: var(--spacing-sm); font-size: var(--font-size-sm); color: var(--white); text-align: center;">Dépannage en moins de 2h</p>
                     </div>
                     
                     <h2>Nos Coordonnées</h2>
@@ -487,11 +518,11 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <img src="./gnflogo.jpeg" alt="National Froid" width="180" height="50">
+                    <img src="./gnffavicon.png" alt="National Froid" style="max-width: 80px; height: auto; margin-bottom: var(--spacing-md);">
                     <p>Expert en climatisation Paris & Île-de-France depuis plus de 10 ans. Installation, entretien et dépannage 24h/7j.</p>
                     <div class="contact-info">
                         <p><strong>📍</strong> 221 rue Lafayette, 75010 Paris</p>
-                        <p><strong>📞</strong> <a href="tel:0157424974">01.57.42.49.74</a></p>
+                        <p><strong class="icon-accent">📞</strong> <a href="tel:0157424974" class="text-accent">01.57.42.49.74</a></p>
                         <p><strong>✉️</strong> <a href="mailto:contact@nationalfroid.fr">contact@nationalfroid.fr</a></p>
                     </div>
                 </div>
@@ -520,7 +551,7 @@
                     <h3>Horaires</h3>
                     <p>Lundi - Vendredi : 8h - 18h<br>
                     Samedi : 9h - 17h<br>
-                    <strong>Urgences 24h/7j</strong></p>
+                    <strong class="text-accent">Urgences 24h/7j</strong></p>
                     
                     <div class="social-links">
                         <a href="#" aria-label="Facebook">📘</a>
