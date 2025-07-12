@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Climatisation : Conseils & Actualités - National Froid</title>
+    <meta name="description" content="Blog National Froid : conseils climatisation, actualités pompes à chaleur, guides entretien, rénovation énergétique. Expertise et conseils pros.">
+    <meta name="keywords" content="blog climatisation, conseils pompe à chaleur, entretien climatiseur, actualités froid, guides techniques">
+    
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "Blog National Froid",
+      "description": "Conseils et actualités sur la climatisation, pompes à chaleur et rénovation énergétique",
+      "url": "https://www.entreprise-de-climatisation.fr/blog/",
+      "publisher": {
+        "@type": "Organization",
+        "name": "National Froid",
+        "telephone": "01.57.42.49.74"
+      }
+    }
+    </script>
+</head>
+<body>
+    <header class="header" id="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="index.html" class="nav-logo">
+                    <img src="./gnflogo.jpeg" alt="National Froid" width="180" height="50">
+                </a>
+                
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">Accueil</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="prestations.html" class="nav-link">Nos prestations</a>
+                            <div class="dropdown-content">
+                                <a href="climatisation.html">Climatisation</a>
+                                <a href="pompes-a-chaleur.html">Pompes à chaleur</a>
+                                <a href="entretien-depanage.html">Entretien & Dépannage</a>
+                                <a href="appels-offres.html">Appels d'offres</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="a-propos.html" class="nav-link">À propos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="blog.html" class="nav-link active">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contact.html" class="nav-link">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="nav-cta">
+                    <a href="tel:0157424974" class="btn-phone">
+                        <span class="phone-icon">📞</span>
+                        01.57.42.49.74
+                    </a>
+                    <a href="contact.html" class="btn btn-primary">Demander un devis</a>
+                </div>
+                
+                <div class="nav-toggle" id="nav-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section style="padding: 120px 0 var(--spacing-2xl); background: linear-gradient(135deg, var(--gray-50) 0%, var(--white) 100%);">
+            <div class="container">
+                <h1 class="section-title">Blog National Froid</h1>
+                <p class="section-subtitle">
+                    Conseils d'experts, actualités et guides pratiques sur la climatisation, 
+                    pompes à chaleur et rénovation énergétique
+                </p>
+                
+                <!-- Search and Filters -->
+                <div style="max-width: 800px; margin: var(--spacing-2xl) auto 0;">
+                    <div class="search-box">
+                        <input type="text" class="search-input" placeholder="Rechercher un article..." id="searchInput">
+                        <span class="search-icon">🔍</span>
+                    </div>
+                    
+                    <div class="filters">
+                        <button class="filter-btn active" data-category="all">Tous</button>
+                        <button class="filter-btn" data-category="climatisation">Climatisation</button>
+                        <button class="filter-btn" data-category="pompe-chaleur">Pompe à chaleur</button>
+                        <button class="filter-btn" data-category="entretien">Entretien</button>
+                        <button class="filter-btn" data-category="economies">Économies d'énergie</button>
+                        <button class="filter-btn" data-category="actualites">Actualités</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Articles en vedette -->
+        <section style="padding: var(--spacing-2xl) 0;">
+            <div class="container">
+                <h2 style="margin-bottom: var(--spacing-xl);">Articles en vedette</h2>
+                
+                <div style="display: grid; grid-template-columns: 2fr 1fr; gap: var(--spacing-2xl); margin-bottom: var(--spacing-3xl);">
+                    <!-- Article principal -->
+                    <article style="background: var(--white); border-radius: var(--border-radius-lg); box-shadow: var(--shadow-lg); overflow: hidden;">
+                        <img src="./assets/images/blog/featured-pac-2025.jpg" alt="Pompes à chaleur 2025" style="width: 100%; height: 300px; object-fit: cover;">
+                        <div style="padding: var(--spacing-xl);">
+                            <div class="blog-meta">
+                                <span>12 janvier 2025</span>
+                                <a href="#" class="blog-category">Pompe à chaleur</a>
+                            </div>
+                            <h2 style="font-size: var(--font-size-2xl); margin-bottom: var(--spacing-md);">
+                                <a href="blog/pompes-chaleur-aides-2025.html" class="blog-title">
+                                    Pompes à chaleur 2025 : Nouvelles aides et évolutions technologiques
+                                </a>
+                            </h2>
+                            <p class="blog-excerpt">
+                                Découvrez les dernières évolutions des aides financières pour les pompes à chaleur en 2025. 
+                                MaPrimeRénov', CEE, Éco-PTZ : tout ce qui change cette année...
+                            </p>
+                            <a href="blog/pompes-chaleur-aides-2025.html" class="blog-read-more">
+                                Lire la suite →
+                            </a>
+                        </div>
+                    </article>
+                    
+                    <!-- Articles secondaires -->
+                    <div style="display: flex; flex-direction: column; gap: var(--spacing-lg);">
+                        <article style="background: var(--white); border-radius: var(--border-radius); box-shadow: var(--shadow-md); overflow: hidden;">
+                            <img src="./assets/images/blog/entretien-hiver.jpg" alt="Entretien climatisation hiver" style="width: 100%; height: 120px; object-fit: cover;">
+                            <div style="padding: var(--spacing-lg);">
+                                <div class="blog-meta">
+                                    <span>8 janvier 2025</span>
+                                    <a href="#" class="blog-category">Entretien</a>
+                                </div>
+                                <h3 style="font-size: var(--font-size-lg); margin-bottom: var(--spacing-sm);">
+                                    <a href="blog/entretien-climatisation-hiver.html" class="blog-title">
+                                        Préparer sa climatisation pour l'hiver
+                                    </a>
+                                </h3>
+                                <a href="blog/entretien-climatisation-hiver.html" class="blog-read-more">Lire →</a>
+                            </div>
+                        </article>
+                        
+                        <article style="background: var(--white); border-radius: var(--border-radius); box-shadow: var(--shadow-md); overflow: hidden;">
+                            <img src="./assets/images/blog/economies-energie.jpg" alt="Économies énergie climatisation" style="width: 100%; height: 120px; object-fit: cover;">
+                            <div style="padding: var(--spacing-lg);">
+                                <div class="blog-meta">
+                                    <span>5 janvier 2025</span>
+                                    <a href="#" class="blog-category">Économies</a>
+                                </div>
+                                <h3 style="font-size: var(--font-size-lg); margin-bottom: var(--spacing-sm);">
+                                    <a href="blog/reduire-facture-climatisation.html" class="blog-title">
+                                        10 astuces pour réduire sa facture de climatisation
+                                    </a>
+                                </h3>
+                                <a href="blog/reduire-facture-climatisation.html" class="blog-read-more">Lire →</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Liste des articles -->
+        <section style="padding: var(--spacing-2xl) 0; background-color: var(--gray-50);">
+            <div class="container">
+                <div class="blog-grid" id="articlesGrid">
+                    <!-- Article 1 -->
+                    <article class="blog-card" data-category="climatisation">
+                        <img src="./assets/images/blog/choisir-climatisation.jpg" alt="Choisir sa climatisation" class="blog-image">
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span>2 janvier 2025</span>
+                                <a href="#" class="blog-category">Climatisation</a>
+                            </div>
+                            <h3><a href="blog/choisir-climatisation-2025.html" class="blog-title">
+                                Comment choisir sa climatisation en 2025 ?
+                            </a></h3>
+                            <p class="blog-excerpt">
+                                Split, multi-split, gainable ou cassette ? Notre guide complet pour choisir 
+                                la climatisation adaptée à vos besoins et votre budget.
+                            </p>
+                            <a href="blog/choisir-climatisation-2025.html" class="blog-read-more">
+                                Lire la suite →
+                            </a>
+                            <div class="tags">
+                                <span class="tag">Guide achat</span>
+                                <span class="tag">Conseils</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Article 2 -->
+                    <article class="blog-card" data-category="pompe-chaleur">
+                        <img src="./assets/images/blog/pac-air-eau-vs-air-air.jpg" alt="PAC air-eau vs air-air" class="blog-image">
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span>28 décembre 2024</span>
+                                <a href="#" class="blog-category">Pompe à chaleur</a>
+                            </div>
+                            <h3><a href="blog/pac-air-eau-vs-air-air.html" class="blog-title">
+                                PAC Air-Eau vs Air-Air : Laquelle choisir ?
+                            </a></h3>
+                            <p class="blog-excerpt">
+                                Comparatif détaillé entre pompes à chaleur air-eau et air-air : avantages, 
+                                inconvénients, coûts et performance selon votre logement.
+                            </p>
+                            <a href="blog/pac-air-eau-vs-air-air.html" class="blog-read-more">
+                                Lire la suite →
+                            </a>
+                            <div class="tags">
+                                <span class="tag">Comparatif</span>
+                                <span class="tag">PAC</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Article 3 -->
+                    <article class="blog-card" data-category="entretien">
+                        <img src="./assets/images/blog/nettoyage-filtres.jpg" alt="Nettoyage filtres climatisation" class="blog-image">
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span>24 décembre 2024</span>
+                                <a href="#" class="blog-category">Entretien</a>
+                            </div>
+                            <h3><a href="blog/nettoyer-filtres-climatisation.html" class="blog-title">
+                                Comment nettoyer les filtres de sa climatisation ?
+                            </a></h3>
+                            <p class="blog-excerpt">
+                                Guide pas à pas pour nettoyer efficacement les filtres de votre climatisation. 
+                                Fréquence, méthodes et erreurs à éviter.
+                            </p>
+                            <a href="blog/nettoyer-filtres-climatisation.html" class="blog-read-more">
+                                Lire la suite →
+                            </a>
+                            <div class="tags">
+                                <span class="tag">DIY</span>
+                                <span class="tag">Maintenance</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Article 4 -->
+                    <article class="blog-card" data-category="actualites">
+                        <img src="./assets/images/blog/reglementation-gaz.jpg" alt="Nouvelle réglementation gaz fluorés" class="blog-image">
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span>20 décembre 2024</span>
+                                <a href="#" class="blog-category">Actualités</a>
+                            </div>
+                            <h3><a href="blog/reglementation-gaz-fluores-2025.html" class="blog-title">
+                                Nouvelle réglementation sur les gaz fluorés 2025
+                            </a></h3>
+                            <p class="blog-excerpt">
+                                Les nouvelles dispositions européennes sur les gaz fluorés impactent le secteur 
+                                de la climatisation. Ce qui change pour les professionnels et particuliers.
+                            </p>
+                            <a href="blog/reglementation-gaz-fluores-2025.html" class="blog-read-more">
+                                Lire la suite →
+                            </a>
+                            <div class="tags">
+                                <span class="tag">Réglementation</span>
+                                <span class="tag">Environnement</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Article 5 -->
+                    <article class="blog-card" data-category="economies">
+                        <img src="./assets/images/blog/audit-energetique.jpg" alt="Audit énergétique" class="blog-image">
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span>15 décembre 2024</span>
+                                <a href="#" class="blog-category">Économies</a>
+                            </div>
+                            <h3><a href="blog/audit-energetique-obligatoire.html" class="blog-title">
+                                Audit énergétique obligatoire : ce qui change
+                            </a></h3>
+                            <p class="blog-excerpt">
+                                L'audit énergétique devient obligatoire pour certaines ventes immobilières. 
+                                Impact sur vos projets de climatisation et rénovation.
+                            </p>
+                            <a href="blog/audit-energetique-obligatoire.html" class="blog-read-more">
+                                Lire la suite →
+                            </a>
+                            <div class="tags">
+                                <span class="tag">Rénovation</span>
+                                <span class="tag">Obligatoire</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Article 6 -->
+                    <article class="blog-card" data-category="climatisation">
+                        <img src="./assets/images/blog/climatisation-bureau.jpg" alt="Climatisation bureau" class="blog-image">
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span>12 décembre 2024</span>
+                                <a href="#" class="blog-category">Climatisation</a>
+                            </div>
+                            <h3><a href="blog/climatisation-bureaux-open-space.html" class="blog-title">
+                                Climatisation de bureaux et open space : solutions pros
+                            </a></h3>
+                            <p class="blog-excerpt">
+                                Comment climatiser efficacement des espaces de travail ? Solutions techniques, 
+                                réglementation et bonnes pratiques pour le tertiaire.
+                            </p>
+                            <a href="blog/climatisation-bureaux-open-space.html" class="blog-read-more">
+                                Lire la suite →
+                            </a>
+                            <div class="tags">
+                                <span class="tag">Professionnel</span>
+                                <span class="tag">Tertiaire</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                
+                <!-- Pagination -->
+                <nav class="pagination">
+                    <a href="#" class="pagination-prev">← Précédent</a>
+                    <span class="current">1</span>
+                    <a href="blog/page/2.html">2</a>
+                    <a href="blog/page/3.html">3</a>
+                    <span>...</span>
+                    <a href="blog/page/8.html">8</a>
+                    <a href="blog/page/2.html" class="pagination-next">Suivant →</a>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section style="padding: var(--spacing-3xl) 0; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: var(--white);">
+            <div class="container" style="text-align: center;">
+                <h2 style="color: var(--white); margin-bottom: var(--spacing-lg);">Restez informés !</h2>
+                <p style="color: rgba(255,255,255,0.9); font-size: var(--font-size-lg); margin-bottom: var(--spacing-xl); max-width: 600px; margin-left: auto; margin-right: auto;">
+                    Recevez nos derniers articles, conseils d'experts et actualités du secteur directement dans votre boîte mail.
+                </p>
+                
+                <form style="max-width: 500px; margin: 0 auto; display: flex; gap: var(--spacing-md);">
+                    <input 
+                        type="email" 
+                        placeholder="Votre email..." 
+                        style="flex: 1; padding: var(--spacing-md); border: none; border-radius: var(--border-radius); font-size: var(--font-size-base);"
+                        required
+                    >
+                    <button type="submit" class="btn btn-white">S'abonner</button>
+                </form>
+                
+                <p style="color: rgba(255,255,255,0.7); font-size: var(--font-size-sm); margin-top: var(--spacing-md);">
+                    Pas de spam, désinscription en un clic. 1 email par mois maximum.
+                </p>
+            </div>
+        </section>
+
+        <!-- Sidebar suggestions -->
+        <section style="padding: var(--spacing-3xl) 0; background-color: var(--white);">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: var(--spacing-2xl);">Articles populaires</h2>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--spacing-xl);">
+                    <div style="border-left: 4px solid var(--primary-color); padding-left: var(--spacing-lg);">
+                        <h3 style="font-size: var(--font-size-lg); margin-bottom: var(--spacing-sm);">
+                            <a href="blog/prix-installation-climatisation.html" style="color: var(--text-primary); text-decoration: none;">
+                                Prix d'installation d'une climatisation en 2025
+                            </a>
+                        </h3>
+                        <p style="color: var(--text-secondary); font-size: var(--font-size-sm);">
+                            Tarifs détaillés par type de climatisation : split, multi-split, gainable...
+                        </p>
+                    </div>
+                    
+                    <div style="border-left: 4px solid var(--primary-color); padding-left: var(--spacing-lg);">
+                        <h3 style="font-size: var(--font-size-lg); margin-bottom: var(--spacing-sm);">
+                            <a href="blog/climatisation-reversible-avantages.html" style="color: var(--text-primary); text-decoration: none;">
+                                Climatisation réversible : tous les avantages
+                            </a>
+                        </h3>
+                        <p style="color: var(--text-secondary); font-size: var(--font-size-sm);">
+                            Pourquoi choisir une climatisation réversible ? Économies et confort...
+                        </p>
+                    </div>
+                    
+                    <div style="border-left: 4px solid var(--primary-color); padding-left: var(--spacing-lg);">
+                        <h3 style="font-size: var(--font-size-lg); margin-bottom: var(--spacing-sm);">
+                            <a href="blog/consommation-climatisation.html" style="color: var(--text-primary); text-decoration: none;">
+                                Quelle consommation pour une climatisation ?
+                            </a>
+                        </h3>
+                        <p style="color: var(--text-secondary); font-size: var(--font-size-sm);">
+                            Calcul de la consommation électrique et conseils pour économiser...
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Une question après lecture ?</h2>
+                    <p>Nos experts sont là pour vous conseiller gratuitement</p>
+                    <div class="cta-buttons">
+                        <a href="contact.html" class="btn btn-primary btn-large">Demander un conseil</a>
+                        <a href="tel:0157424974" class="btn btn-white btn-large">01.57.42.49.74</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="./gnflogo.jpeg" alt="National Froid" width="180" height="50">
+                    <p>Expert en climatisation Paris & Île-de-France depuis plus de 10 ans. Installation, entretien et dépannage 24h/7j.</p>
+                    <div class="contact-info">
+                        <p><strong>📍</strong> 221 rue Lafayette, 75010 Paris</p>
+                        <p><strong>📞</strong> <a href="tel:0157424974">01.57.42.49.74</a></p>
+                        <p><strong>✉️</strong> <a href="mailto:contact@nationalfroid.fr">contact@nationalfroid.fr</a></p>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="climatisation.html">Climatisation</a></li>
+                        <li><a href="pompes-a-chaleur.html">Pompes à chaleur</a></li>
+                        <li><a href="entretien-depanage.html">Entretien & Dépannage</a></li>
+                        <li><a href="appels-offres.html">Appels d'offres</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Entreprise</h3>
+                    <ul>
+                        <li><a href="a-propos.html">À propos</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="mentions-legales.html">Mentions légales</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Horaires</h3>
+                    <p>Lundi - Vendredi : 8h - 18h<br>
+                    Samedi : 9h - 17h<br>
+                    <strong>Urgences 24h/7j</strong></p>
+                    
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="LinkedIn">💼</a>
+                        <a href="#" aria-label="Google">🌐</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 National Froid - Tous droits réservés | SIRET: 51481892100025</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./assets/js/main.js"></script>
+    <script>
+        // Blog filtering functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const articles = document.querySelectorAll('.blog-card');
+            const searchInput = document.getElementById('searchInput');
+            
+            // Filter functionality
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Update active state
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    const category = this.dataset.category;
+                    
+                    articles.forEach(article => {
+                        if (category === 'all' || article.dataset.category === category) {
+                            article.style.display = 'block';
+                        } else {
+                            article.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            // Search functionality
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                
+                articles.forEach(article => {
+                    const title = article.querySelector('.blog-title').textContent.toLowerCase();
+                    const excerpt = article.querySelector('.blog-excerpt').textContent.toLowerCase();
+                    
+                    if (title.includes(searchTerm) || excerpt.includes(searchTerm)) {
+                        article.style.display = 'block';
+                    } else {
+                        article.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

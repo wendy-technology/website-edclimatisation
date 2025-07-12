@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Devis Gratuit - National Froid Paris & Île-de-France</title>
+    <meta name="description" content="Contactez National Froid pour votre projet de climatisation. Devis gratuit, intervention 24h/7j en Île-de-France. Tel: 01.57.42.49.74">
+    <meta name="keywords" content="contact climatisation Paris, devis gratuit, urgence climatisation, dépannage 24h">
+    
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        .contact-hero {
+            padding: 120px 0 var(--spacing-2xl);
+            background-color: var(--gray-50);
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-3xl);
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-lg);
+        }
+        
+        .contact-info {
+            background-color: var(--white);
+            padding: var(--spacing-2xl);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-lg);
+            height: fit-content;
+        }
+        
+        .contact-form {
+            background-color: var(--white);
+            padding: var(--spacing-2xl);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .form-group {
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: var(--spacing-xs);
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: var(--spacing-sm) var(--spacing-md);
+            border: 2px solid var(--gray-200);
+            border-radius: var(--border-radius);
+            font-size: var(--font-size-base);
+            transition: border-color 0.2s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-lg);
+        }
+        
+        .error-message {
+            color: #dc2626;
+            font-size: var(--font-size-sm);
+            margin-top: var(--spacing-xs);
+            display: none;
+        }
+        
+        .form-group input.error,
+        .form-group select.error,
+        .form-group textarea.error {
+            border-color: #dc2626;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-lg);
+            padding: var(--spacing-md);
+            background-color: var(--gray-50);
+            border-radius: var(--border-radius);
+        }
+        
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: var(--font-size-xl);
+            flex-shrink: 0;
+        }
+        
+        .contact-details h4 {
+            margin: 0 0 var(--spacing-xs);
+            color: var(--text-primary);
+        }
+        
+        .contact-details p {
+            margin: 0;
+            color: var(--text-secondary);
+        }
+        
+        .urgence-banner {
+            background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+            color: var(--white);
+            padding: var(--spacing-lg);
+            border-radius: var(--border-radius-lg);
+            text-align: center;
+            margin-bottom: var(--spacing-xl);
+        }
+        
+        .urgence-banner h3 {
+            color: var(--white);
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .map-container {
+            margin-top: var(--spacing-xl);
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 300px;
+            border: none;
+        }
+        
+        .horaires {
+            background-color: var(--gray-50);
+            padding: var(--spacing-lg);
+            border-radius: var(--border-radius);
+            margin-top: var(--spacing-lg);
+        }
+        
+        .horaires h4 {
+            margin-bottom: var(--spacing-md);
+            color: var(--text-primary);
+        }
+        
+        .horaire-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: var(--spacing-xs);
+            color: var(--text-secondary);
+        }
+        
+        .horaire-item.highlight {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        
+        @media (max-width: 768px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: var(--spacing-xl);
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="index.html" class="nav-logo">
+                    <img src="./gnflogo.jpeg" alt="National Froid" width="180" height="50">
+                </a>
+                
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">Accueil</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="prestations.html" class="nav-link">Nos prestations</a>
+                            <div class="dropdown-content">
+                                <a href="climatisation.html">Climatisation</a>
+                                <a href="pompes-a-chaleur.html">Pompes à chaleur</a>
+                                <a href="entretien-depanage.html">Entretien & Dépannage</a>
+                                <a href="appels-offres.html">Appels d'offres</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="a-propos.html" class="nav-link">À propos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="blog.html" class="nav-link">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contact.html" class="nav-link active">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="nav-cta">
+                    <a href="tel:0157424974" class="btn-phone">
+                        <span class="phone-icon">📞</span>
+                        01.57.42.49.74
+                    </a>
+                    <a href="contact.html" class="btn btn-primary">Demander un devis</a>
+                </div>
+                
+                <div class="nav-toggle" id="nav-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="contact-hero">
+            <div class="container">
+                <h1 class="section-title">Contactez-nous</h1>
+                <p class="section-subtitle">
+                    Devis gratuit, conseil personnalisé et intervention rapide en Île-de-France
+                </p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section style="padding: var(--spacing-3xl) 0;">
+            <div class="contact-container">
+                <!-- Informations de contact -->
+                <div class="contact-info">
+                    <div class="urgence-banner">
+                        <h3>🚨 Urgence 24h/7j</h3>
+                        <p>Panne de climatisation ? Dépannage immédiat</p>
+                        <a href="tel:0157424974" class="btn btn-white" style="margin-top: var(--spacing-md);">
+                            Appeler maintenant
+                        </a>
+                    </div>
+                    
+                    <h2>Nos Coordonnées</h2>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-details">
+                            <h4>Adresse</h4>
+                            <p>221 rue Lafayette<br>75010 Paris</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-details">
+                            <h4>Téléphone</h4>
+                            <p><a href="tel:0157424974">01.57.42.49.74</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p><a href="mailto:contact@nationalfroid.fr">contact@nationalfroid.fr</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">🏢</div>
+                        <div class="contact-details">
+                            <h4>SIRET</h4>
+                            <p>51481892100025</p>
+                        </div>
+                    </div>
+                    
+                    <div class="horaires">
+                        <h4>Horaires d'ouverture</h4>
+                        <div class="horaire-item">
+                            <span>Lundi - Vendredi</span>
+                            <span>8h - 18h</span>
+                        </div>
+                        <div class="horaire-item">
+                            <span>Samedi</span>
+                            <span>9h - 17h</span>
+                        </div>
+                        <div class="horaire-item">
+                            <span>Dimanche</span>
+                            <span>Fermé</span>
+                        </div>
+                        <div class="horaire-item highlight">
+                            <span>Urgences</span>
+                            <span>24h/7j</span>
+                        </div>
+                    </div>
+                    
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2623.9!2d2.3522!3d48.8566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDjCsDUxJzI0LjAiTiAywrAyMScwOC4wIkU!5e0!3m2!1sfr!2sfr!4v1234567890"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+                
+                <!-- Formulaire de contact -->
+                <div class="contact-form">
+                    <h2>Demander un devis gratuit</h2>
+                    <p>Remplissez ce formulaire pour recevoir votre devis personnalisé sous 24h</p>
+                    
+                    <form class="devis-form" method="POST" action="/send-contact">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="prenom">Prénom *</label>
+                                <input type="text" id="prenom" name="prenom" required>
+                                <div class="error-message"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="nom">Nom *</label>
+                                <input type="text" id="nom" name="nom" required>
+                                <div class="error-message"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                                <div class="error-message"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="telephone">Téléphone *</label>
+                                <input type="tel" id="telephone" name="telephone" required>
+                                <div class="error-message"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="code_postal">Code postal *</label>
+                                <input type="text" id="code_postal" name="code_postal" placeholder="75010" required>
+                                <div class="error-message"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="ville">Ville</label>
+                                <input type="text" id="ville" name="ville" placeholder="Paris">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service_type">Type de service *</label>
+                            <select id="service_type" name="service_type" required>
+                                <option value="">Sélectionnez un service</option>
+                                <option value="installation">Installation climatisation</option>
+                                <option value="pompe_chaleur">Installation pompe à chaleur</option>
+                                <option value="maintenance">Entretien / Maintenance</option>
+                                <option value="depannage">Dépannage urgent</option>
+                                <option value="conseil">Conseil / Étude</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                            <div class="error-message"></div>
+                        </div>
+                        
+                        <div class="additional-fields">
+                            <!-- Champs dynamiques selon le type de service -->
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="budget">Budget prévisionnel</label>
+                            <select id="budget" name="budget">
+                                <option value="">Sélectionnez une fourchette</option>
+                                <option value="moins-1000">Moins de 1 000€</option>
+                                <option value="1000-2000">1 000€ - 2 000€</option>
+                                <option value="2000-4000">2 000€ - 4 000€</option>
+                                <option value="4000-6000">4 000€ - 6 000€</option>
+                                <option value="plus-6000">Plus de 6 000€</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="delai">Délai souhaité</label>
+                            <select id="delai" name="delai">
+                                <option value="">Sélectionnez un délai</option>
+                                <option value="urgent">Urgent (dans la semaine)</option>
+                                <option value="1-mois">Dans le mois</option>
+                                <option value="3-mois">Dans les 3 mois</option>
+                                <option value="plus-tard">Plus tard</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Description de votre projet *</label>
+                            <textarea id="message" name="message" placeholder="Décrivez votre projet, vos besoins, contraintes particulières..." required></textarea>
+                            <div class="error-message"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" required>
+                                J'accepte d'être contacté par National Froid pour mon projet *
+                            </label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" name="newsletter">
+                                Je souhaite recevoir des conseils et offres par email
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-large" style="width: 100%;">
+                            Envoyer ma demande
+                        </button>
+                        
+                        <p style="font-size: var(--font-size-sm); color: var(--text-light); text-align: center; margin-top: var(--spacing-md);">
+                            * Champs obligatoires. Vos données sont protégées et ne seront jamais transmises à des tiers.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Zone d'intervention -->
+        <section class="zone-intervention">
+            <div class="container">
+                <div class="zone-content">
+                    <div class="zone-text">
+                        <h2>Zone d'intervention</h2>
+                        <p>Nous intervenons rapidement dans toute l'Île-de-France :</p>
+                        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--spacing-md);">
+                            <ul class="zone-list" style="margin: 0;">
+                                <li>Paris (75)</li>
+                                <li>Seine-et-Marne (77)</li>
+                                <li>Yvelines (78)</li>
+                                <li>Essonne (91)</li>
+                            </ul>
+                            <ul class="zone-list" style="margin: 0;">
+                                <li>Hauts-de-Seine (92)</li>
+                                <li>Seine-Saint-Denis (93)</li>
+                                <li>Val-de-Marne (94)</li>
+                                <li>Val-d'Oise (95)</li>
+                            </ul>
+                        </div>
+                        <p style="margin-top: var(--spacing-lg); font-weight: 500; color: var(--primary-color);">
+                            Votre département ne figure pas dans la liste ? Contactez-nous, nous étudierons votre demande.
+                        </p>
+                    </div>
+                    <div class="zone-map">
+                        <img src="./assets/images/carte-idf.png" alt="Carte intervention Île-de-France" width="400" height="300">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="./gnflogo.jpeg" alt="National Froid" width="180" height="50">
+                    <p>Expert en climatisation Paris & Île-de-France depuis plus de 10 ans. Installation, entretien et dépannage 24h/7j.</p>
+                    <div class="contact-info">
+                        <p><strong>📍</strong> 221 rue Lafayette, 75010 Paris</p>
+                        <p><strong>📞</strong> <a href="tel:0157424974">01.57.42.49.74</a></p>
+                        <p><strong>✉️</strong> <a href="mailto:contact@nationalfroid.fr">contact@nationalfroid.fr</a></p>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="climatisation.html">Climatisation</a></li>
+                        <li><a href="pompes-a-chaleur.html">Pompes à chaleur</a></li>
+                        <li><a href="entretien-depanage.html">Entretien & Dépannage</a></li>
+                        <li><a href="appels-offres.html">Appels d'offres</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Entreprise</h3>
+                    <ul>
+                        <li><a href="a-propos.html">À propos</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="mentions-legales.html">Mentions légales</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Horaires</h3>
+                    <p>Lundi - Vendredi : 8h - 18h<br>
+                    Samedi : 9h - 17h<br>
+                    <strong>Urgences 24h/7j</strong></p>
+                    
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="LinkedIn">💼</a>
+                        <a href="#" aria-label="Google">🌐</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 National Froid - Tous droits réservés | SIRET: 51481892100025</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>

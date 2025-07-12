@@ -1,0 +1,26 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.entreprise-de-climatisation.fr/sitemap.xml
+
+# Disallow admin pages
+Disallow: /admin/
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /wp-content/plugins/
+Disallow: /wp-content/themes/
+
+# Disallow search and private pages
+Disallow: /search/
+Disallow: /private/
+Disallow: /tmp/
+
+# Allow important resources
+Allow: /assets/
+Allow: /images/
+Allow: /css/
+Allow: /js/
+
+# Crawl delay (optional)
+Crawl-delay: 1
